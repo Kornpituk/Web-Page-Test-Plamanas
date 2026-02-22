@@ -1,40 +1,153 @@
-/* Footer */
-.footer {
-  background-color: var(--color-black);
-  color: var(--color-white);
-  padding: 80px 0;
+/* การตั้งค่าพื้นฐาน */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+}
+
+/* ตั้งค่าตัว Footer หลัก */
+.footer {
+  width: 100%;
+  background-color: #f7f7f7; /* สีเทาอ่อนแบบในรูป */
+  color: #111;
+}
+
+/* ส่วนหัวสำหรับ Mobile */
+.footer__top {
+  background-color: #fff;
+  padding: 24px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 1px solid #eee;
+}
+
+/* กล่องควบคุมเนื้อหาภายใน Footer */
+.footer__inner {
+  padding: 40px 60px;
+  margin: 0 auto;
+}
+
+/* Grid จัดการ Layout แบบ 5 คอลัมน์ (Desktop) */
 .footer__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1.5fr; /* ให้คอลัมน์ Newsletter กว้างกว่านิดหน่อย */
+  gap: 30px;
 }
 
-.footer__column h3 {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+/* หัวข้อแต่ละคอลัมน์ */
+.footer__col-title {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.footer__links {
-  margin-bottom: 20px;
+/* จัดการลิสต์และลิงก์ */
+.footer__col ul {
+  list-style: none;
 }
 
-.footer__links li {
-  margin-bottom: 10px;
+.footer__col li {
+  margin-bottom: 16px;
 }
 
-.footer__social {
+.footer__col a {
+  text-decoration: none;
+  color: #666; /* สีเทาสำหรับลิงก์ */
+  font-size: 13px;
+  transition: color 0.2s ease;
+}
+
+.footer__col a:hover {
+  color: #000;
+}
+
+/* ฟอร์ม Newsletter */
+.footer__newsletter {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
 }
 
-.footer__social a {
-  font-size: 1.2rem;
+.footer__newsletter-input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #999; /* เส้นใต้กล่อง Input */
+  background: transparent;
+  padding: 8px 0;
+  font-size: 13px;
+  margin-bottom: 20px;
+  outline: none;
+  transition: border-color 0.2s;
 }
 
+.footer__newsletter-input::placeholder {
+  color: #888;
+}
+
+.footer__newsletter-input:focus {
+  border-bottom-color: #000;
+}
+
+.footer__newsletter-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #e5e5e5; /* สีปุ่มแบบในรูป */
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+  color: #000;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s;
+}
+
+.footer__newsletter-btn:hover {
+  background-color: #d4d4d4;
+}
+
+/* ส่วนล่างสุด (Copyright & Credit) */
 .footer__bottom {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 80px;
+  font-size: 12px;
+  color: #111;
+}
+
+/* =========================================
+   Responsive สำหรับมือถือ (หน้าจอเล็กกว่า 768px)
+   ========================================= */
+@media (max-width: 768px) {
+  .footer__top {
+    display: block; /* แสดงแถบ HOMEPAGE ในมือถือ */
+  }
+
+  .footer__inner {
+    padding: 40px 20px;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr 1fr; /* แบ่งเป็น 2 คอลัมน์แทน */
+    row-gap: 40px;
+  }
+
+  /* ให้ Newsletter กินพื้นที่เต็มความกว้างในมือถือ */
+  .footer__col--newsletter {
+    grid-column: 1 / -1;
+    margin-top: 10px;
+  }
+
+  .footer__bottom {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #eaeaea; /* เพิ่มเส้นคั่นบางๆ ด้านล่างให้ดูเรียบร้อย */
+  }
 }
