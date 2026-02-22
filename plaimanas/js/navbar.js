@@ -1,5 +1,14 @@
 // ================= DESKTOP EDITORIAL HOVER =================
 const wrapper = document.querySelector(".navbar__dropdown-wrapper");
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
 
 if (wrapper) {
   wrapper.addEventListener("mouseenter", () => {
@@ -10,7 +19,6 @@ if (wrapper) {
     document.body.classList.remove("editorial-open");
   });
 }
-
 
 // ================= MOBILE =================
 const hamburgerBtn = document.getElementById("hamburgerBtn");
@@ -37,7 +45,7 @@ if (closeBtn && mobileMenu) {
 
 // ================= ACCORDION =================
 const accordionTriggers = document.querySelectorAll(
-  ".mobile-menu__accordion-trigger"
+  ".mobile-menu__accordion-trigger",
 );
 
 accordionTriggers.forEach((trigger) => {
@@ -56,4 +64,3 @@ closeBtn.addEventListener("click", () => {
   mobileMenu.classList.remove("open");
   document.body.style.overflow = "";
 });
-

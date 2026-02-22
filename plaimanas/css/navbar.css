@@ -5,15 +5,20 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: var(--color-white);
+  background: transparent;
   color: var(--color-black);
   z-index: 1000;
+  position: sticky;
+  top: 0;
 }
+
+
 
 .navbar__nav {
   justify-self: center;
   gap: 24px;
 }
+
 
 .navbar__currency {
   position: relative;
@@ -142,11 +147,13 @@
   background: var(--color-white);
   color: var(--color-black);
   padding: 20px;
+  padding-top: 50px;
 }
 
 /* ตอนเปิด */
 .mobile-menu.open {
   transform: translateY(0);
+  padding-bottom: 0;
 }
 
 /* header mobile */
@@ -209,9 +216,12 @@
 /* brand bottom */
 .mobile-menu__brand {
   margin-top: auto;
-  text-align: center;
-  font-size: 14px;
-  opacity: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  font-size: 16vw; /* ขยายอีกนิด */
+  font-weight: 900 !important;
+  
 }
 
 /* ===== RESPONSIVE ===== */
@@ -239,6 +249,7 @@
   .navbar__actions {
     justify-self: end;
   }
+  
 }
 
 @media screen and (max-width: 600px) {

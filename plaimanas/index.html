@@ -13,10 +13,17 @@
     />
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/collactionsGrid.css" />
+    <link rel="stylesheet" href="css/editorial.css" />
     <link rel="stylesheet" href="css/faq.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/heroSection.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/sectionBestseller.css" />
+    <link rel="stylesheet" href="css/sectionNew.css" />
+    <link rel="stylesheet" href="css/stories.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
@@ -88,26 +95,14 @@
           class="navbar__actions__icon"
         />
       </div>
+      
     </header>
 
+    <h1 class="hero__title">PLAIMANAS</h1>
+
+    
     <!-- Mobile Nav Overlay -->
     <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-      <div class="mobile-menu__header">
-        <div class="navbar__currency">
-          <a href="#" class="label">TH · THB ▾</a>
-          <div class="dropdown-content">
-            <a href="#">US - USD</a>
-          </div>
-        </div>
-        <div class="navbar__actions">
-          <a href="#" class="navbar__actions__label">SIGN IN</a>
-          <img
-            src="assets/icon/meteor-icons_bag-shopping.svg"
-            alt="Search"
-            class="navbar__actions__icon"
-          />
-        </div>
-      </div>
       <nav class="mobile-menu__nav">
         <a href="#">WOMEN</a>
         <a href="#">COLLECTIONS</a>
@@ -139,13 +134,19 @@
     ============================================================ -->
       <section class="hero" aria-label="Hero banner">
         <div class="hero__image-wrapper">
-          <img
-            src="assets/images/hero.jpg"
-            alt="PLAIMANAS hero"
-            class="hero__image"
-          />
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster="assets/images/hero-poster.jpg"
+          >
+            <source src="assets/video/mockup_video576.mp4" type="video/mp4" />
+            Your browser does not support HTML5 video.
+          </video>
         </div>
-        <h1 class="hero__title">PLAIMANAS</h1>
+        
       </section>
 
       <!-- ============================================================
