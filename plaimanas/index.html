@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="css/sectionBestseller.css" />
     <link rel="stylesheet" href="css/sectionNew.css" />
+    <link rel="stylesheet" href="css/sectionInquiry.css" />
     <link rel="stylesheet" href="css/stories.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -270,111 +271,132 @@
         id="faq"
         aria-label="Frequently asked questions"
       >
-        <div class="faq__header">
-          <h2 class="faq__title">FREQUENTLY ASKED QUESTIONS</h2>
-          <p class="faq__subtitle">Lorem ipsum dolor sit amet...</p>
-        </div>
+        <div class="container">
+          <div class="faq__header">
+            <h2 class="faq__title">
+              FREQUENTLY ASKED<br class="mobile-break" />
+              QUESTIONS
+            </h2>
+            <p class="faq__subtitle">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br
+                class="mobile-break"
+              />
+              Nam ornare, nisl non rhoncus commodo.
+            </p>
+          </div>
 
-        <!-- Category Tabs -->
-        <div class="faq__tabs" role="tablist">
-          <button
-            class="faq__tab"
-            role="tab"
-            data-category="orders"
-            aria-selected="false"
-          >
-            ORDERS
-          </button>
-          <button
-            class="faq__tab faq__tab--active"
-            role="tab"
-            data-category="shipping"
-            aria-selected="true"
-          >
-            SHIPPING
-          </button>
-          <button
-            class="faq__tab"
-            role="tab"
-            data-category="returns"
-            aria-selected="false"
-          >
-            RETURNS & EXCHANGES
-          </button>
-          <button
-            class="faq__tab"
-            role="tab"
-            data-category="sizing"
-            aria-selected="false"
-          >
-            SIZING & PRODUCTS
-          </button>
-        </div>
-
-        <!-- FAQ Content Groups (show/hide via JS) -->
-        <div class="faq__group" data-category="orders" hidden>
-          <!-- accordion items for ORDERS -->
-        </div>
-
-        <div class="faq__group" data-category="shipping">
-          <div class="faq__item">
-            <button class="faq__question" aria-expanded="true">
-              DO YOU OFFER INTERNATIONAL SHIPPING?
-              <span class="faq__icon">∧</span>
+          <div class="faq__tabs" role="tablist">
+            <button
+              class="faq__tab"
+              role="tab"
+              data-category="orders"
+              aria-selected="false"
+            >
+              ORDERS
             </button>
-            <div class="faq__answer">
-              <p>Items can be returned within 14 days of receipt...</p>
+            <button
+              class="faq__tab"
+              role="tab"
+              data-category="shipping"
+              aria-selected="false"
+            >
+              SHIPPING
+            </button>
+            <button
+              class="faq__tab faq__tab--active"
+              role="tab"
+              data-category="returns"
+              aria-selected="true"
+            >
+              RETURNS & EXCHANGES
+            </button>
+            <button
+              class="faq__tab"
+              role="tab"
+              data-category="sizing"
+              aria-selected="false"
+            >
+              SIZING & PRODUCTS
+            </button>
+          </div>
+
+          <div class="faq__group" data-category="returns">
+            <div class="faq__item">
+              <button class="faq__question" aria-expanded="true">
+                WHAT IS YOUR RETURN POLICY?
+                <svg
+                  class="faq__icon faq__icon--open"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="18 15 12 9 6 15"></polyline>
+                </svg>
+              </button>
+              <div class="faq__answer">
+                <p>
+                  Items can be returned within 14 days of receipt, provided they
+                  are unworn, unwashed, and in original condition with tags
+                  attached.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question" aria-expanded="false">
+                CAN I EXCHANGE FOR A DIFFERENT SIZE?
+                <svg
+                  class="faq__icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq__answer" hidden>
+                <p>
+                  Yes, exchanges are subject to size availability upon receipt
+                  of your return.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__question" aria-expanded="false">
+                ARE SALE ITEMS REFUNDABLE?
+                <svg
+                  class="faq__icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq__answer" hidden>
+                <p>
+                  Sale items are final sale and cannot be returned or exchanged.
+                </p>
+              </div>
             </div>
           </div>
-          <div class="faq__item">
-            <button class="faq__question" aria-expanded="false">
-              HOW LONG DOES DELIVERY TAKE?
-              <span class="faq__icon">∨</span>
-            </button>
-            <div class="faq__answer" hidden>
-              <p>...</p>
-            </div>
-          </div>
-          <div class="faq__item">
-            <button class="faq__question" aria-expanded="false">
-              HOW CAN I TRACK MY ORDER?
-              <span class="faq__icon">∨</span>
-            </button>
-            <div class="faq__answer" hidden>
-              <p>...</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="faq__group" data-category="returns" hidden>
-          <div class="faq__item">
-            <button class="faq__question" aria-expanded="true">
-              WHAT IS YOUR RETURN POLICY?
-              <span class="faq__icon">∧</span>
-            </button>
-            <div class="faq__answer">
-              <p>Items can be returned within 14 days of receipt...</p>
-            </div>
-          </div>
-          <div class="faq__item">
-            <button class="faq__question" aria-expanded="false">
-              CAN I EXCHANGE FOR A DIFFERENT SIZE?
-              <span class="faq__icon">∨</span>
-            </button>
-            <div class="faq__answer" hidden><p>...</p></div>
-          </div>
-          <div class="faq__item">
-            <button class="faq__question" aria-expanded="false">
-              ARE SALE ITEMS REFUNDABLE?
-              <span class="faq__icon">∨</span>
-            </button>
-            <div class="faq__answer" hidden><p>...</p></div>
-          </div>
-        </div>
-
-        <div class="faq__group" data-category="sizing" hidden>
-          <!-- accordion items for SIZING & PRODUCTS -->
-        </div>
+        </container>
       </section>
 
       <!-- ============================================================
@@ -391,57 +413,78 @@
         id="inquiry"
         aria-label="Make an inquiry"
       >
-        <div class="inquiry__content">
-          <h2 class="inquiry__title">MAKE AN INQUIRY</h2>
-          <p class="inquiry__desc">Lorem ipsum dolor sit amet...</p>
+        <div class="inquiry__container">
+          <div class="inquiry__left">
+            <h2 class="inquiry__title">
+              MAKE AN <br class="desktop-only" />INQUIRY
+            </h2>
+            <p class="inquiry__desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+              ornare, nisl non rhoncus commodo.
+            </p>
+          </div>
 
-          <form class="inquiry__form" novalidate>
-            <!-- Radio Group -->
-            <fieldset class="inquiry__radio-group">
-              <legend class="sr-only">Inquiry type</legend>
-              <label class="inquiry__radio-label">
-                <input type="radio" name="type" value="onsite" checked /> Onsite
+          <div class="inquiry__right">
+            <form class="inquiry__form" novalidate>
+              <fieldset class="inquiry__radio-group">
+                <legend class="sr-only">Inquiry type</legend>
+                <label class="inquiry__radio-label">
+                  <input type="radio" name="type" value="onsite" checked />
+                  Onsite
+                </label>
+                <label class="inquiry__radio-label">
+                  <input type="radio" name="type" value="hybrid" /> Hybrid
+                </label>
+              </fieldset>
+
+              <div class="inquiry__fields">
+                <div class="inquiry__input-wrapper">
+                  <input
+                    type="text"
+                    class="inquiry__input"
+                    placeholder="Full name*"
+                    required
+                  />
+                </div>
+
+                <div class="inquiry__input-wrapper">
+                  <span class="inquiry__tiny-label">Email*</span>
+                  <input
+                    type="email"
+                    class="inquiry__input"
+                    value="Plaimanas@gmail.com"
+                    required
+                  />
+                </div>
+
+                <div class="inquiry__input-wrapper">
+                  <input
+                    type="tel"
+                    class="inquiry__input"
+                    placeholder="Phone Number*"
+                    required
+                  />
+                </div>
+
+                <div class="inquiry__input-wrapper">
+                  <select class="inquiry__input inquiry__select" required>
+                    <option value="" disabled selected>Select Subject*</option>
+                    <option value="general">General</option>
+                    <option value="order">Order</option>
+                  </select>
+                </div>
+              </div>
+
+              <label class="inquiry__checkbox-label">
+                <input type="checkbox" required />
+                <span class="checkbox-text"
+                  >I agree to all terms & conditions</span
+                >
               </label>
-              <label class="inquiry__radio-label">
-                <input type="radio" name="type" value="hybrid" /> Hybrid
-              </label>
-            </fieldset>
 
-            <!-- Input Grid -->
-            <div class="inquiry__fields">
-              <input
-                type="text"
-                class="inquiry__input"
-                placeholder="Full name*"
-                required
-              />
-              <input
-                type="email"
-                class="inquiry__input"
-                placeholder="Plaimanas@gmail.com"
-                required
-              />
-              <input
-                type="tel"
-                class="inquiry__input"
-                placeholder="Phone Number*"
-                required
-              />
-              <select class="inquiry__input inquiry__select">
-                <option value="" disabled selected>Select Subject</option>
-                <option>General</option>
-                <option>Order</option>
-              </select>
-            </div>
-
-            <!-- Terms -->
-            <label class="inquiry__checkbox-label">
-              <input type="checkbox" required />
-              I agree to all terms & conditions
-            </label>
-
-            <button type="submit" class="inquiry__submit">SEND</button>
-          </form>
+              <button type="submit" class="inquiry__submit">SEND</button>
+            </form>
+          </div>
         </div>
       </section>
     </main>

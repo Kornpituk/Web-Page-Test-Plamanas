@@ -1,0 +1,211 @@
+/* ตั้งค่าพื้นฐาน */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  color: #111;
+  line-height: 1.5;
+}
+
+/* ซ่อนข้อความสำหรับ Screen Reader */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Section Container */
+.section-inquiry {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.inquiry__container {
+  width: 100%;
+  max-width: 68.25rem;
+  display: flex;
+  flex-direction: column; /* ค่าเริ่มต้นของ Mobile */
+  gap: 40px;
+}
+
+/* Typography ฝั่งข้อความ */
+.inquiry__title {
+  font-size: 36px;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.inquiry__desc {
+  font-size: 14px;
+  color: #333;
+  max-width: 380px;
+}
+
+/* ซ่อน <br> ใน Mobile */
+.desktop-only {
+  display: none;
+}
+
+/* กลุ่ม Radio Buttons */
+.inquiry__radio-group {
+  border: none;
+  display: flex;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.inquiry__radio-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ปรับสี Radio & Checkbox ให้เป็นสีดำ */
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: #000;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* กลุ่ม Inputs */
+.inquiry__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.inquiry__input-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 50px; /* ล็อกความสูงไว้เพื่อให้กล่องที่มี/ไม่มี Label สูงเท่ากัน */
+}
+
+.inquiry__tiny-label {
+  font-size: 10px;
+  color: #999;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.inquiry__input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 8px 0;
+  font-size: 14px;
+  color: #000;
+  background: transparent;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.inquiry__input::placeholder {
+  color: #999;
+}
+
+.inquiry__input:focus {
+  border-bottom-color: #000;
+}
+
+/* สไตล์เฉพาะสำหรับ Select (ลูกศร Dropdown) */
+.inquiry__select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23999' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0px center;
+  cursor: pointer;
+  color: #999; /* สีเหมือน Placeholder ตอนยังไม่เลือก */
+}
+
+/* Checkbox & Terms */
+.inquiry__checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+/* ปุ่ม Submit */
+.inquiry__submit {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 16px 40px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.inquiry__submit:hover {
+  background-color: #333;
+}
+
+/* =========================================
+   Responsive สำหรับ Desktop (หน้าจอใหญ่กว่า 768px)
+   ========================================= */
+@media (min-width: 768px) {
+  .section-inquiry {
+    padding: 100px 40px;
+  }
+
+  /* แบ่งจอเป็น 2 ฝั่ง */
+  .inquiry__container {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 60px;
+  }
+
+  .inquiry__left {
+    flex: 0 0 35%; /* ฝั่งซ้ายกินพื้นที่ 35% */
+  }
+
+  .inquiry__right {
+    flex: 0 0 55%; /* ฝั่งขวากินพื้นที่ 55% */
+  }
+
+  .desktop-only {
+    display: inline;
+  }
+
+  .inquiry__title {
+    font-size: 48px; /* ขยายขนาดฟอนต์บน Desktop */
+  }
+
+  /* จัด Input เป็น Grid 2x2 */
+  .inquiry__fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 20px;
+  }
+}
