@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PLAIMANAS</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/faq.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+
+  <body>
+    <!-- ============================================================
+    NAVBAR
+    - Logo (left)
+    - Nav links: WOMEN / COLLECTIONS / EDITORIAL (dropdown) / NEWS / STORIES (center)
+    - Right: TH-THB currency selector / SIGN IN / Cart icon
+    - Mobile: hamburger button → fullscreen overlay menu
+  ============================================================ -->
+    <header class="navbar" id="navbar">
+      <!-- LEFT -->
+      <div class="navbar__currency">
+        <a href="#" class="label">TH · THB ▾</a>
+        <div class="dropdown-content">
+          <a href="#">US - USD</a>
+        </div>
+      </div>
+
+      <!-- CENTER -->
+      <nav class="navbar__nav" id="navLinks" aria-label="Main navigation">
+        <a href="#" class="navbar__link">WOMEN</a>
+        <a href="#" class="navbar__link">COLLECTIONS</a>
+
+        <!-- EDITORIAL dropdown trigger -->
+        <div class="navbar__dropdown-wrapper">
+          <a
+            class="navbar__link navbar__dropdown-trigger"
+            aria-expanded="false"
+            aria-haspopup="true"
+            href="javascript:void(0)"
+          >
+            EDITORIAL
+          </a>
+          <!-- Dropdown -->
+          <ul
+            class="navbar__dropdown"
+            role="menu"
+            aria-label="Editorial submenu"
+          >
+            <li><a href="#" role="menuitem">A.S.C</a></li>
+            <li><a href="#" role="menuitem">BAZAAR</a></li>
+            <li><a href="#" role="menuitem">ELLE</a></li>
+            <li><a href="#" role="menuitem">GQ</a></li>
+          </ul>
+        </div>
+
+        <a href="#" class="navbar__link">NEWS</a>
+        <a href="#" class="navbar__link">STORIES</a>
+      </nav>
+
+      <!-- hamburger -->
+      <button
+        class="navbar__hamburger"
+        id="hamburgerBtn"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <!-- 3-bar icon or ✕ when open -->
+        ☰
+      </button>
+
+      <!-- RIGHT -->
+      <div class="navbar__actions">
+        <a href="#" class="navbar__actions__label">SIGN IN</a>
+        <img
+          src="assets/icon/meteor-icons_bag-shopping.svg"
+          alt="Search"
+          class="navbar__actions__icon"
+        />
+      </div>
+    </header>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <div class="mobile-menu__header">
+        <div class="navbar__currency">
+          <a href="#" class="label">TH · THB ▾</a>
+          <div class="dropdown-content">
+            <a href="#">US - USD</a>
+          </div>
+        </div>
+        <div class="navbar__actions">
+          <a href="#" class="navbar__actions__label">SIGN IN</a>
+          <img
+            src="assets/icon/meteor-icons_bag-shopping.svg"
+            alt="Search"
+            class="navbar__actions__icon"
+          />
+        </div>
+      </div>
+      <nav class="mobile-menu__nav">
+        <a href="#">WOMEN</a>
+        <a href="#">COLLECTIONS</a>
+        <!-- EDITORIAL with expandable sub-list -->
+        <div class="mobile-menu__accordion">
+          <button class="mobile-menu__accordion-trigger">EDITORIAL ▾</button>
+          <ul class="mobile-menu__sub">
+            <li><a href="#">A.S.C</a></li>
+            <li><a href="#">BAZAAR</a></li>
+            <li><a href="#">ELLE</a></li>
+            <li><a href="#">GQ</a></li>
+            <li><a href="#">L'OFFICIAL THAILAND</a></li>
+            <li><a href="#">NUMERO</a></li>
+            <li><a href="#">VOGUE</a></li>
+          </ul>
+        </div>
+        <a href="#">NEWS</a>
+        <a href="#">STORIES</a>
+      </nav>
+      <div class="mobile-menu__brand">PLAIMANAS</div>
+    </div>
+    <div class="navbar-overlay"></div>
+
+    <main>
+      <!-- ============================================================
+      SECTION 1 — HERO
+      - Full viewport height image (black & white fashion photo)
+      - Brand name "PLAIMANAS" overlaid large on bottom
+    ============================================================ -->
+      <section class="hero" aria-label="Hero banner">
+        <div class="hero__image-wrapper">
+          <img
+            src="assets/images/hero.jpg"
+            alt="PLAIMANAS hero"
+            class="hero__image"
+          />
+        </div>
+        <h1 class="hero__title">PLAIMANAS</h1>
+      </section>
+
+      <!-- ============================================================
+      SECTION 2 — NEW
+      - Center-aligned image (portrait)
+      - "NEW" label overlay on image
+      - Subtitle text + description paragraph below image
+    ============================================================ -->
+      <section class="section-new" aria-label="New arrivals">
+        <div class="section-new__image-wrapper">
+          <img
+            src="assets/images/new.jpg"
+            alt="New collection"
+            class="section-new__image"
+          />
+          <span class="section-new__label">NEW</span>
+        </div>
+        <div class="section-new__text">
+          <h2 class="section-new__subtitle">
+            Sed egestas, nibh a condimentum imperdiet
+          </h2>
+          <p class="section-new__desc">Lorem ipsum dolor sit amet...</p>
+        </div>
+      </section>
+
+      <!-- ============================================================
+      SECTION 3 — BESTSELLER
+      - Full-width image with dark red fabric
+      - "BESTSELLER" text overlay centered
+      - Subtitle + description below
+    ============================================================ -->
+      <section class="section-bestseller" aria-label="Bestsellers">
+        <div class="section-bestseller__image-wrapper">
+          <img
+            src="assets/images/bestseller.jpg"
+            alt="Bestseller"
+            class="section-bestseller__image"
+          />
+          <span class="section-bestseller__label">BESTSELLER</span>
+        </div>
+        <div class="section-bestseller__text">
+          <h2 class="section-bestseller__subtitle">
+            Sed egestas, nibh a condimentum imperdiet
+          </h2>
+          <p class="section-bestseller__desc">Lorem ipsum dolor sit amet...</p>
+        </div>
+      </section>
+
+      <!-- ============================================================
+      SECTION 4 — COLLECTIONS GRID
+      - 1 large image: COLLECTION 01 (full width)
+      - 2 smaller images side-by-side: COLLECTION 02 / COLLECTION 03
+      - Each image has label overlay
+    ============================================================ -->
+      <section class="section-collections" aria-label="Collections">
+        <div class="collections__grid">
+          <div class="collections__item collections__item--large">
+            <img src="assets/images/collection-01.jpg" alt="Collection 01" />
+            <span class="collections__label">COLLECTION 01</span>
+          </div>
+          <div class="collections__item collections__item--small">
+            <img src="assets/images/collection-02.jpg" alt="Collection 02" />
+            <span class="collections__label">COLLECTION 02</span>
+          </div>
+          <div class="collections__item collections__item--small">
+            <img src="assets/images/collection-03.jpg" alt="Collection 03" />
+            <span class="collections__label">COLLECTION 03</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+      SECTION 5 — MARQUEE TICKER
+      - Infinite horizontal scroll text
+      - "NEW ARRIVAL ← BEST SELLING → NEW ARRIVAL ← ..."
+      - Black background, white text
+    ============================================================ -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <!-- Duplicate content for seamless loop -->
+          <span class="marquee__item">NEW ARRIVAL</span>
+          <span class="marquee__arrow">←</span>
+          <span class="marquee__item">BEST SELLING</span>
+          <span class="marquee__arrow">→</span>
+          <span class="marquee__item">NEW ARRIVAL</span>
+          <span class="marquee__arrow">←</span>
+          <span class="marquee__item">BEST SELLING</span>
+          <span class="marquee__arrow">→</span>
+          <!-- repeat for seamless effect -->
+        </div>
+      </div>
+
+      <!-- ============================================================
+      SECTION 6 — FEATURES / USP ROW
+      - 3 columns: Worldwide Shipping / Customer Service / Secure Payment
+      - Each: icon (optional) + heading + short description
+    ============================================================ -->
+      <section class="section-features">
+        <div class="features__grid">
+          <div class="features__item">
+            <h3 class="features__title">WORLDWIDE SHIPPING</h3>
+            <p class="features__desc">Lorem ipsum dolor sit amet...</p>
+          </div>
+          <div class="features__item">
+            <h3 class="features__title">CUSTOMER SERVICE</h3>
+            <p class="features__desc">Lorem ipsum dolor sit amet...</p>
+          </div>
+          <div class="features__item">
+            <h3 class="features__title">SECURE PAYMENT</h3>
+            <p class="features__desc">Lorem ipsum dolor sit amet...</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+      SECTION 7 — FAQ
+      - Heading + subtitle
+      - Category tabs: ORDERS / SHIPPING / RETURNS & EXCHANGES / SIZING & PRODUCTS
+      - Accordion items per category (show/hide with JS)
+      - Black background
+    ============================================================ -->
+      <section
+        class="section-faq"
+        id="faq"
+        aria-label="Frequently asked questions"
+      >
+        <div class="faq__header">
+          <h2 class="faq__title">FREQUENTLY ASKED QUESTIONS</h2>
+          <p class="faq__subtitle">Lorem ipsum dolor sit amet...</p>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="faq__tabs" role="tablist">
+          <button
+            class="faq__tab"
+            role="tab"
+            data-category="orders"
+            aria-selected="false"
+          >
+            ORDERS
+          </button>
+          <button
+            class="faq__tab faq__tab--active"
+            role="tab"
+            data-category="shipping"
+            aria-selected="true"
+          >
+            SHIPPING
+          </button>
+          <button
+            class="faq__tab"
+            role="tab"
+            data-category="returns"
+            aria-selected="false"
+          >
+            RETURNS & EXCHANGES
+          </button>
+          <button
+            class="faq__tab"
+            role="tab"
+            data-category="sizing"
+            aria-selected="false"
+          >
+            SIZING & PRODUCTS
+          </button>
+        </div>
+
+        <!-- FAQ Content Groups (show/hide via JS) -->
+        <div class="faq__group" data-category="orders" hidden>
+          <!-- accordion items for ORDERS -->
+        </div>
+
+        <div class="faq__group" data-category="shipping">
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="true">
+              DO YOU OFFER INTERNATIONAL SHIPPING?
+              <span class="faq__icon">∧</span>
+            </button>
+            <div class="faq__answer">
+              <p>Items can be returned within 14 days of receipt...</p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              HOW LONG DOES DELIVERY TAKE?
+              <span class="faq__icon">∨</span>
+            </button>
+            <div class="faq__answer" hidden>
+              <p>...</p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              HOW CAN I TRACK MY ORDER?
+              <span class="faq__icon">∨</span>
+            </button>
+            <div class="faq__answer" hidden>
+              <p>...</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__group" data-category="returns" hidden>
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="true">
+              WHAT IS YOUR RETURN POLICY?
+              <span class="faq__icon">∧</span>
+            </button>
+            <div class="faq__answer">
+              <p>Items can be returned within 14 days of receipt...</p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              CAN I EXCHANGE FOR A DIFFERENT SIZE?
+              <span class="faq__icon">∨</span>
+            </button>
+            <div class="faq__answer" hidden><p>...</p></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              ARE SALE ITEMS REFUNDABLE?
+              <span class="faq__icon">∨</span>
+            </button>
+            <div class="faq__answer" hidden><p>...</p></div>
+          </div>
+        </div>
+
+        <div class="faq__group" data-category="sizing" hidden>
+          <!-- accordion items for SIZING & PRODUCTS -->
+        </div>
+      </section>
+
+      <!-- ============================================================
+      SECTION 8 — INQUIRY FORM
+      - Heading: "MAKE AN INQUIRY"
+      - Short description text
+      - Radio: Onsite / Hybrid
+      - Fields: Full name / Email / Phone Number / Select Subject
+      - Checkbox: agree to terms
+      - SEND button
+    ============================================================ -->
+      <section
+        class="section-inquiry"
+        id="inquiry"
+        aria-label="Make an inquiry"
+      >
+        <div class="inquiry__content">
+          <h2 class="inquiry__title">MAKE AN INQUIRY</h2>
+          <p class="inquiry__desc">Lorem ipsum dolor sit amet...</p>
+
+          <form class="inquiry__form" novalidate>
+            <!-- Radio Group -->
+            <fieldset class="inquiry__radio-group">
+              <legend class="sr-only">Inquiry type</legend>
+              <label class="inquiry__radio-label">
+                <input type="radio" name="type" value="onsite" checked /> Onsite
+              </label>
+              <label class="inquiry__radio-label">
+                <input type="radio" name="type" value="hybrid" /> Hybrid
+              </label>
+            </fieldset>
+
+            <!-- Input Grid -->
+            <div class="inquiry__fields">
+              <input
+                type="text"
+                class="inquiry__input"
+                placeholder="Full name*"
+                required
+              />
+              <input
+                type="email"
+                class="inquiry__input"
+                placeholder="Plaimanas@gmail.com"
+                required
+              />
+              <input
+                type="tel"
+                class="inquiry__input"
+                placeholder="Phone Number*"
+                required
+              />
+              <select class="inquiry__input inquiry__select">
+                <option value="" disabled selected>Select Subject</option>
+                <option>General</option>
+                <option>Order</option>
+              </select>
+            </div>
+
+            <!-- Terms -->
+            <label class="inquiry__checkbox-label">
+              <input type="checkbox" required />
+              I agree to all terms & conditions
+            </label>
+
+            <button type="submit" class="inquiry__submit">SEND</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================================================
+    FOOTER
+    - Top: "HOMEPAGE" label
+    - 5 columns: ABOUT / HELP / SOCIAL / LEGAL / NEWSLETTER
+    - Bottom: Brand name "PLAIMANAS" + copyright
+  ============================================================ -->
+    <footer class="footer">
+      <div class="footer__top">
+        <span class="footer__homepage-label">HOMEPAGE</span>
+      </div>
+
+      <div class="footer__grid">
+        <div class="footer__col">
+          <h4 class="footer__col-title">ABOUT</h4>
+          <ul>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Editorial</a></li>
+            <li><a href="#">Stories</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">HELP</h4>
+          <ul>
+            <li><a href="#">Payment Notification</a></li>
+            <li><a href="#">Tracking Service</a></li>
+            <li><a href="#">Customer Service</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">SOCIAL</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">LEGAL</h4>
+          <ul>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">NEWSLETTER</h4>
+          <form class="footer__newsletter">
+            <input
+              type="email"
+              placeholder="Email"
+              class="footer__newsletter-input"
+            />
+            <button type="submit" class="footer__newsletter-btn">
+              SUBSCRIBE
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span class="footer__brand">PLAIMANAS</span>
+        <small class="footer__copy"
+          >© 2024 PLAIMANAS. All rights reserved.</small
+        >
+      </div>
+    </footer>
+
+    <!-- ============================================================
+    SCRIPTS
+    - navbar.js: hamburger toggle, dropdown, scroll behavior
+    - faq.js:    tab switching, accordion open/close
+    - marquee.js (optional, CSS handles animation)
+  ============================================================ -->
+    <script src="js/navbar.js"></script>
+    <script src="js/faq.js"></script>
+  </body>
+</html>

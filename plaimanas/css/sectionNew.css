@@ -1,0 +1,39 @@
+/* Section New */
+.section-new {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.section-new__image-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+.section-new__image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+.section-new__label {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-white);
+  background-color: var(--color-black);
+  padding: 10px 20px;
+}
+
+.section-new__subtitle {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.section-new__desc {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}

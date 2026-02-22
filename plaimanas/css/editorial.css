@@ -1,0 +1,42 @@
+/* Editorial Section */
+.editorial {
+  padding: 80px 0;
+}
+
+.editorial__title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.editorial__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.editorial__item {
+  position: relative;
+  overflow: hidden;
+}
+
+.editorial__image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.editorial__item:hover .editorial__image {
+  transform: scale(1.05);
+}
+
+.editorial__label {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-white);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 8px 16px;
+}

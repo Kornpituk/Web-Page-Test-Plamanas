@@ -1,0 +1,127 @@
+/* Reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Hanken Grotesk", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Variables */
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+  --color-red: #d90000;
+  --font-main: "Hanken Grotesk", sans-serif;
+  --color-bg-light: #fff;
+  --color-text-dark: #000;
+  --spacing-section: 80px;
+}
+
+body {
+  font-family: var(--font-main);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-black);
+  background-color: var(--color-white);
+  overflow-x: hidden;
+}
+/* STEP 1 — ทำให้ overlay อยู่บนสุด */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: black;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 100;
+}
+/* STEP 2 — เปิด overlay เมื่อ hover */
+body.editorial-open::before {
+  opacity: 1;
+  pointer-events: auto;
+}
+/* STEP 3 — ดันเฉพาะ EDITORIAL + dropdown ขึ้นเหนือ overlay */
+body.editorial-open .navbar__dropdown-wrapper {
+  position: relative;
+  z-index: 200;
+}
+/* STEP 4 — เปลี่ยนสีให้เป็นขาว */
+body.editorial-open .navbar__dropdown-trigger,
+body.editorial-open .navbar__dropdown a {
+  color: white;
+}
+/* dropdown เป็นดำสนิท: */
+body.editorial-open .navbar__dropdown {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Layout */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 4rem;
+  }
+
+  .section-new,
+  .section-bestseller,
+  .collections-grid,
+  .editorial,
+  .stories,
+  .faq,
+  .footer {
+    padding: 40px 0;
+  }
+
+  .editorial__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stories__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr;
+  }
+}
