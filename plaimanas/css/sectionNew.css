@@ -1,39 +1,76 @@
-/* Section New */
+/* คลุมทั้ง Section และจัดให้อยู่กึ่งกลางหน้าจอ */
 .section-new {
-  padding: 80px 0;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #ffffff; /* สีพื้นหลังสีขาว */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+/* กรอบสำหรับรูปภาพ */
 .section-new__image-wrapper {
-  position: relative;
-  display: inline-block;
-  margin-bottom: 40px;
+  position: relative; /* สำคัญมาก เพื่อให้ตัวหนังสือซ้อนอยู่ข้างในได้ */
+  width: 100%;
+  max-width: 600px; /* จำกัดความกว้างของรูปให้ดูพอดี ไม่ใหญ่คับจอเกินไป */
+  overflow: hidden;
 }
 
+/* ตัวรูปภาพ */
 .section-new__image {
   width: 100%;
-  max-width: 600px;
-  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 1 / 1; /* บังคับให้รูปเป็นสี่เหลี่ยมจัตุรัสตามภาพตัวอย่าง */
 }
 
+/* ข้อความ NEW ทับบนรูปภาพ */
 .section-new__label {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--color-white);
-  background-color: var(--color-black);
-  padding: 10px 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* จัดกึ่งกลางแนวนอนและแนวตั้งเป๊ะๆ */
+  color: #ffffff;
+  font-size: clamp(40px, 8vw, 80px); /* ย่อขยายขนาดตามหน้าจอ */
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  z-index: 2;
+  white-space: nowrap;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* เพิ่มเงาให้ตัวหนังสือลอยเด่นขึ้นมา */
 }
 
+/* ส่วนกล่องข้อความด้านล่าง */
+.section-new__text {
+  margin-top: 30px;
+  text-align: center;
+  max-width: 550px; /* จำกัดความกว้างเพื่อให้ข้อความตัดบรรทัดเหมือนในแบบ */
+  padding: 0 15px;
+}
+
+/* หัวข้อรอง (Subtitle) */
 .section-new__subtitle {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 15px;
+  line-height: 1.4;
 }
 
+/* รายละเอียดข้อความ (Description) */
 .section-new__desc {
-  font-size: 1.1rem;
-  max-width: 600px;
-  margin: 0 auto;
+  font-size: 14px;
+  color: #333333;
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+@media (max-width: 768px) {
+    .section-new__subtitle {
+        font-size: 14px;
+    }
+    .section-new__desc {
+        font-size: 12px;
+    }
 }

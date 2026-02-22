@@ -1,0 +1,64 @@
+/* การตั้งค่าพื้นฐานสำหรับกล่อง Marquee */
+.marquee {
+  background-color: #000000;
+  color: #ffffff;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  font-family:
+    "Helvetica Neue", Arial, sans-serif; /* เปลี่ยนฟอนต์ให้เข้ากับเว็บของคุณได้ */
+}
+
+/* Track ที่รวมกลุ่มชุดข้อความทั้งหมดไว้ */
+.marquee__track {
+  display: flex;
+  width: max-content;
+}
+
+/* กลุ่มชุดข้อความแต่ละชุด (ตั้งค่าให้เลื่อนตลอดเวลา) */
+.marquee__set {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* ระยะห่างระหว่างลูกศรกับข้อความ */
+  padding-right: 40px; /* สำคัญมาก: เพื่อให้ระยะห่างตอนจบชุดเท่ากับตอนเริ่มชุด (เนียนตา) */
+  animation: scrollText 12s linear infinite;
+}
+
+/* สไตล์ของตัวหนังสือ */
+.marquee__item {
+  font-size: 3.75rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* สไตล์ของไอคอนลูกศร */
+.marquee__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Animation ให้วิ่งจากขวาไปซ้าย */
+@keyframes scrollText {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee__item {
+    font-size: 1.5rem;
+  }
+}
+
+/* ทำให้หยุดเลื่อนเวลาเอาเมาส์ไปชี้ (ถ้าต้องการ) */
+.marquee:hover .marquee__set {
+  animation-play-state: paused;
+}

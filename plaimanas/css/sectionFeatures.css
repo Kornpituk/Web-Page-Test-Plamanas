@@ -1,0 +1,52 @@
+/* คลุมทั้ง Section จัดให้อยู่กึ่งกลางและมีพื้นที่ว่างด้านบน-ล่าง */
+.section-features {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* ตั้งค่า Grid ควบคุมการเรียงตัว */
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* แบ่งเป็น 3 คอลัมน์เท่าๆ กัน */
+  gap: 40px; /* ระยะห่างระหว่างแต่ละคอลัมน์ */
+  width: 100%;
+  max-width: 1000px; /* จำกัดความกว้างสูงสุดไม่ให้กางออกเกินไปในจอใหญ่ */
+}
+
+/* จัดข้อความในแต่ละบล็อกให้ชิดซ้ายตามรูป */
+.features__item {
+  text-align: left;
+}
+
+/* สไตล์ของหัวข้อ */
+.features__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* สไตล์ของรายละเอียดข้อความ */
+.features__desc {
+  font-size: 14px;
+  color: #000000; /* ใช้สีเทาเพื่อให้ดูสบายตาและแยกลำดับความสำคัญจากหัวข้อ */
+  line-height: 1.5;
+  margin: 0;
+  opacity: 0.6;
+}
+
+/* =========================================
+   การแสดงผลบนหน้าจอมือถือ (Responsive)
+   ========================================= */
+@media (max-width: 768px) {
+  .features__grid {
+    grid-template-columns: 1fr; /* เปลี่ยนเป็น 1 คอลัมน์ (เรียงต่อกันลงมา) */
+    gap: 30px; /* ปรับลดระยะห่างลงเล็กน้อยบนมือถือ */
+  }
+}
