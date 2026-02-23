@@ -23,7 +23,7 @@
 }
 
 .faq__title {
-  font-size: 2rem;
+  font-size: 40px;
   font-weight: 800;
   margin-bottom: 16px;
   letter-spacing: 0.5px;
@@ -31,7 +31,7 @@
 
 .faq__subtitle {
   color: #a0a0a0;
-  font-size: 0.95rem;
+  font-size: 14px;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -55,7 +55,7 @@
   border: 1px solid #262626;
   padding: 10px 24px;
   border-radius: 50px;
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
   font-family: inherit;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -93,7 +93,7 @@
   background: none;
   border: none;
   color: #ffffff;
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 700;
   font-family: inherit;
   padding: 28px 0;
@@ -111,10 +111,12 @@
 .faq__answer {
   max-height: 0; /* เริ่มต้นให้สูง 0 */
   overflow: hidden;
-  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s ease;
+  transition:
+    max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    padding 0.3s ease;
   padding-bottom: 0; /* เริ่มต้นไม่มี padding */
   color: #888888;
-  font-size: 0.9rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
 }
 
@@ -128,12 +130,6 @@
   transform: rotate(180deg);
 }
 
-/* ลบตัวนี้ออกเพราะเราจะคุมด้วย CSS แทน */
-[hidden] {
-  display: none !important;
-}
-
-
 /* --- Responsive Design (Mobile) --- */
 @media (max-width: 600px) {
   .section-faq {
@@ -141,7 +137,7 @@
   }
 
   .faq__title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   .mobile-break {
@@ -165,6 +161,10 @@
 
   .faq__answer {
     font-size: 0.85rem;
+    padding-bottom: 0;
+  }
+  /* เพิ่มส่วนนี้เข้าไปเพื่อให้ตอนเปิดใน Mobile มีระยะห่างที่ถูกต้อง */
+  .faq__item.is-open .faq__answer {
     padding-bottom: 24px;
   }
 }

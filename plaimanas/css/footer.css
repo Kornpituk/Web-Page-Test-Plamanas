@@ -132,6 +132,12 @@ body {
 
   .footer__inner {
     padding: 40px 20px;
+    background-color: #f7f7f7;
+  }
+
+  .footer {
+    background-color: #fff;
+    padding: 0 !important;
   }
 
   .footer__grid {

@@ -27,10 +27,3 @@
   height: 100%;
   object-fit: cover;
 }
-
-@media (max-width: 768px) {
-  .hero__title {
-    padding-top: 20px;
-    font-size: 22vw;
-  }
-}
