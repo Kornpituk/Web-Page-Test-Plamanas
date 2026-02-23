@@ -12,13 +12,10 @@
   top: 0;
 }
 
-
-
 .navbar__nav {
   justify-self: center;
   gap: 24px;
 }
-
 
 .navbar__currency {
   position: relative;
@@ -148,6 +145,19 @@
   color: var(--color-black);
   padding: 20px;
   padding-top: 50px;
+  padding-bottom: 0; /* ให้โลโก้ชิดขอบล่างจริงๆ */
+}
+
+.hero__title__moblie__end {
+  margin-top: auto;
+  width: calc(100% + 37px); /* 40px = padding 20px ซ้าย + ขวา */
+  display: block;
+  flex-shrink: 0;
+  max-height: 10vw; /* ปรับตามขนาดที่ต้องการ */
+
+  margin-left: -19px;
+  margin-right: 2px;
+  margin-bottom: 2px;
 }
 
 /* ตอนเปิด */
@@ -200,7 +210,6 @@
   overflow: hidden;
   transition: max-height 0.3s ease;
   gap: 15px;
-  
 }
 
 .mobile-menu__sub.open {
@@ -217,11 +226,8 @@
 .mobile-menu__brand {
   margin-top: auto;
   display: flex;
-  justify-content: center;
-  align-items: end;
   font-size: 16vw; /* ขยายอีกนิด */
   font-weight: 900 !important;
-  
 }
 
 /* ===== RESPONSIVE ===== */
@@ -249,7 +255,6 @@
   .navbar__actions {
     justify-self: end;
   }
-  
 }
 
 @media screen and (max-width: 600px) {

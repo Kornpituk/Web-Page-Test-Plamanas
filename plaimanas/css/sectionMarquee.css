@@ -15,6 +15,7 @@
 .marquee__track {
   display: flex;
   width: max-content;
+  animation: scrollText 12s linear infinite;
 }
 
 /* กลุ่มชุดข้อความแต่ละชุด (ตั้งค่าให้เลื่อนตลอดเวลา) */
@@ -23,7 +24,6 @@
   align-items: center;
   gap: 40px; /* ระยะห่างระหว่างลูกศรกับข้อความ */
   padding-right: 40px; /* สำคัญมาก: เพื่อให้ระยะห่างตอนจบชุดเท่ากับตอนเริ่มชุด (เนียนตา) */
-  animation: scrollText 12s linear infinite;
 }
 
 /* สไตล์ของตัวหนังสือ */
@@ -35,11 +35,17 @@
   margin: 0;
 }
 
-/* สไตล์ของไอคอนลูกศร */
 .marquee__arrow {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0; /* ป้องกันรูปถูกบีบ */
+}
+
+.marquee__arrow img {
+  width: 48px;   /* ปรับขนาดตามต้องการ */
+  height: 48px;
+  display: block;
 }
 
 /* Animation ให้วิ่งจากขวาไปซ้าย */
@@ -48,7 +54,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
@@ -59,6 +65,6 @@
 }
 
 /* ทำให้หยุดเลื่อนเวลาเอาเมาส์ไปชี้ (ถ้าต้องการ) */
-.marquee:hover .marquee__set {
+.marquee:hover .marquee__track {
   animation-play-state: paused;
 }

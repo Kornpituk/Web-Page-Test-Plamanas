@@ -46,13 +46,13 @@ html {
   position: fixed;
   top: var(--navbar-height);
   left: 0;
-  margin: 0;
+  margin-top: auto; /* ดันลงล่างสุด */
+  width: 100%; /* เต็มความกว้าง */
   z-index: 10;
   pointer-events: none;
   mix-blend-mode: difference;
   display: block; /* เพื่อให้จัดการ margin/position ได้ง่าย */
 
-  width: 100vw;
   height: auto;
   padding: 30px 12px; /* บนมือถือเว้นขอบซ้ายขวาน้อยลง ตัวหนังสือจะได้ใหญ่ชิดขอบแบบรูป 2 */
   object-fit: contain;

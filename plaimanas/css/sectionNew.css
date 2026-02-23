@@ -50,11 +50,15 @@
 
 /* หัวข้อรอง (Subtitle) */
 .section-new__subtitle {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
   color: #000000;
   margin-bottom: 15px;
   line-height: 1.4;
+}
+
+.section-new__text:hover {
+  opacity: 0.5;
 }
 
 /* รายละเอียดข้อความ (Description) */
@@ -72,5 +76,9 @@
     }
     .section-new__desc {
         font-size: 12px;
+    }
+
+    .section-new__image-wrapper {
+      padding: 20px;
     }
 }
